@@ -28,8 +28,16 @@ const navigator = () => {
             linking={linking}
             fallback={<Text>Loading...</Text>}>
             <Stack.Navigator>
-                <Stack.Screen name="Home" component={home} />
-                <Stack.Screen name="Setting" component={setting} />
+                <Stack.Screen
+                    name="Home"
+                    component={home}
+                    options={{ headerLeft: () => null }}
+                />
+                <Stack.Screen
+                    name="Setting"
+                    component={setting}
+                    options={{ headerLeft: () => null }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );
