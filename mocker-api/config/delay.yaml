@@ -1,0 +1,18 @@
+---
+description: "delay response"
+
+request:
+  method: GET
+  path: /delay
+response:
+  statusCode: 200
+  headers:
+    Content-Type:
+      - "application/json"
+  body: >
+    {  
+      "id": {{fake.Digits}},
+      "message": "delayed response from the server"
+    }
+control:
+  delay: "2s"
