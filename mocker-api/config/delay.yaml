@@ -9,10 +9,8 @@ response:
   headers:
     Content-Type:
       - "application/json"
-  body: >
-    {  
-      "id": {{fake.Digits}},
-      "message": "delayed response from the server"
-    }
+    Access-Control-Allow-Origin:
+      - "*"
+  body: '{"id": {{fake.Digits}},"message": "delayed response from the server","test": "additional data"}'
 control:
   delay: "2s"
