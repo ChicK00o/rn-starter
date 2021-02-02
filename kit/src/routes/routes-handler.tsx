@@ -21,7 +21,7 @@ const linking = {
     },
 };
 
-const navigator = () => {
+const Navigator: React.FunctionComponent = ({ children }) => {
     const Stack = createStackNavigator();
     return (
         <NavigationContainer
@@ -39,8 +39,9 @@ const navigator = () => {
                     options={{ headerLeft: () => null }}
                 />
             </Stack.Navigator>
+            {children}
         </NavigationContainer>
     );
 };
 
-export default navigator;
+export default Navigator;
