@@ -12,7 +12,17 @@ import {
 
 declare const global: { HermesInternal: null | {} };
 
-const Home = () => {
+const val = true;
+
+function Bomb() {
+    if (val) {
+        throw new Error('💥 CABOOM 💥');
+    }
+    return null;
+}
+
+const Kaboom = () => {
+    const [explode, setExplode] = React.useState(false);
     const linkTo = useLinkTo();
     return (
         <>
@@ -31,7 +41,7 @@ const Home = () => {
                             <Text style={styles.sectionTitle}>Step One</Text>
                             <Text style={styles.sectionDescription}>
                                 Edit{' '}
-                                <Text style={styles.highlight}>home.tsx</Text>{' '}
+                                <Text style={styles.highlight}>kaboom.tsx</Text>{' '}
                                 to change this screen and then come back to see
                                 your edits.
                             </Text>
@@ -41,19 +51,20 @@ const Home = () => {
                                 See Your Changes
                             </Text>
                             <Text style={styles.sectionDescription}>
-                                home Hello world changes testing!
+                                kaboom Hello world changes testing!
                             </Text>
                         </View>
                         <View style={styles.sectionContainer}>
                             <Text style={styles.sectionTitle}>Debug</Text>
                             <Text style={styles.sectionDescription}>
-                                home Hello world debug testing!
+                                kaboom Hello world debug testing!
                             </Text>
                         </View>
                         <View style={styles.sectionContainer}>
                             <Text style={styles.sectionTitle}>Learn More</Text>
                             <Text style={styles.sectionDescription}>
-                                home Read the docs to discover what to do next:
+                                kaboom Read the docs to discover what to do
+                                next:
                             </Text>
                         </View>
                     </View>
@@ -62,9 +73,11 @@ const Home = () => {
                         onPress={() => linkTo('/setting')}
                     />
                     <Button
-                        title="Go to Kaboom"
-                        onPress={() => linkTo('/kaboom')}
+                        title="Go to Home"
+                        onPress={() => linkTo('/home')}
                     />
+                    {explode ? <Bomb /> : null}
+                    <Button title="Explode" onPress={() => setExplode(true)} />
                 </ScrollView>
             </SafeAreaView>
         </>
@@ -103,4 +116,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Home;
+export default Kaboom;

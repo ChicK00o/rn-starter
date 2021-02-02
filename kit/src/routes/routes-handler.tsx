@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { Text } from 'react-native';
 import home from './home';
+import kaboom from './kaboom';
 import setting from './setting';
 
 const linking = {
@@ -17,11 +18,15 @@ const linking = {
                 path: 'setting',
                 initialRouteName: 'setting',
             },
+            Kaboom: {
+                path: 'kaboom',
+                initialRouteName: 'kaboom',
+            },
         },
     },
 };
 
-const Navigator: React.FunctionComponent = ({ children }) => {
+const Navigator = () => {
     const Stack = createStackNavigator();
     return (
         <NavigationContainer
@@ -38,8 +43,8 @@ const Navigator: React.FunctionComponent = ({ children }) => {
                     component={setting}
                     options={{ headerLeft: () => null }}
                 />
+                <Stack.Screen name="Kaboom" component={kaboom} />
             </Stack.Navigator>
-            {children}
         </NavigationContainer>
     );
 };

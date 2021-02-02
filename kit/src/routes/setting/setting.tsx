@@ -64,6 +64,10 @@ const Setting = () => {
                         title="Go to Home"
                         onPress={() => linkTo('/home')}
                     />
+                    <Button
+                        title="Go to Kaboom"
+                        onPress={() => linkTo('/kaboom')}
+                    />
                 </ScrollView>
             </SafeAreaView>
         </>
