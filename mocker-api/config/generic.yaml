@@ -1,0 +1,95 @@
+---
+description: "generic response"
+
+request:
+  method: GET
+  path: /Generic
+response:
+  statusCode: 200
+  headers:
+    Content-Type:
+      - "application/json"
+    Access-Control-Allow-Origin:
+      - "*"
+  body: >
+    {
+      "name": "generic",
+      "components": [
+        {
+          "id":"2",
+          "type":"textWithHeader",
+          "data":{
+            "id":"2id",
+            "title":"Step One",
+            "text1":"Edit",
+            "highlight":"generic.tsx",
+            "text2":"to change this screen and then come to see your edits."
+          }
+        },
+        {
+          "id":"3",
+          "type":"textWithHeader",
+          "data":{
+            "id":"3id",
+            "title":"See your changes",
+            "text1":"generic Hello World changes testing!"
+          }
+        },
+        {
+          "id":"4",
+          "type":"textWithHeader",
+          "data":{
+            "id":"4id",
+            "title":"Debug",
+            "text1":"generic Hello world debug testing"
+          }
+        },
+        {
+          "id":"5",
+          "type":"textWithHeader",
+          "data":{
+            "id":"5id",
+            "title":"Learn More",
+            "text1":"generic Read the docs to discover what to do next:"
+          }
+        },
+        {
+          "id":"1",
+          "type":"ctaButton",
+          "data":{
+            "id":"1id",
+            "title":"Go to Kaboom",
+            "action": {
+              "type":"linkTo",
+              "data":"/kaboom"
+            }
+          }
+        },
+        {
+          "id":"6",
+          "type":"ctaButton",
+          "data":{
+            "id":"6id",
+            "title":"Go to Home",
+            "action": {
+              "type":"linkTo",
+              "data":"/home"
+            }
+          }
+        },
+        {
+          "id":"7",
+          "type":"ctaButton",
+          "data":{
+            "id":"7id",
+            "title":"Go to Setting",
+            "action": {
+              "type":"linkTo",
+              "data":"/setting"
+            }
+          }
+        }
+      ]
+    }
+control:
+  delay: "2s"

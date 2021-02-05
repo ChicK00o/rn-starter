@@ -11,6 +11,11 @@ response:
       - "application/json"
     Access-Control-Allow-Origin:
       - "*"
-  body: '{"id": {{fake.Digits}},"message": "delayed response from the server","test": "additional data"}'
+  body: >
+    {
+      "id": {{fake.Digits}},
+      "message": "delayed response from the server",
+      "test": "additional data"
+    }
 control:
   delay: "2s"
