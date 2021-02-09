@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
-import { Column as Col, Grid, Row } from 'react-native-responsive-grid';
+import { Column as Col, Grid, Row } from '../../utils/grid';
 import { componentData } from '../componentSelector';
 
 const data = [...new Array(12).keys()];
@@ -83,7 +83,7 @@ const layout = (state: any) => {
 
 const IGrid: React.FunctionComponent<componentData> = () => (
     <Grid>
-        {({ state, _ }: any) => {
+        {({ state }: any) => {
             console.log(state);
             return (
                 <Col fullWidth={true} style={{ backgroundColor: 'lightgray' }}>
