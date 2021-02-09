@@ -18,7 +18,7 @@ interface pageResponse {
 }
 
 const fetchData = (route: string) =>
-    fetch('http://192.168.0.147:8083/' + route).then((res) => res.json());
+    fetch('http://192.168.1.18:8083/' + route).then((res) => res.json());
 
 const RestRendering = () => {
     const routeName = useRoute();

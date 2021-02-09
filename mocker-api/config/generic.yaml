@@ -88,6 +88,13 @@ response:
               "data":"/setting"
             }
           }
+        },
+        {
+          "id":"8",
+          "type":"grid",
+          "data":{
+            "id":"8id"
+          }
         }
       ]
     }

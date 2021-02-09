@@ -1,5 +1,6 @@
 import React from 'react';
 import CtaButton from '../ctaButton';
+import Grid from '../grid';
 import TextWithHeader from '../textWithHeader';
 
 export type componentData = {
@@ -17,6 +18,8 @@ const ComponentSelector = (data: componentData) => {
             });
         case 'ctaButton':
             return React.createElement(CtaButton, { key: data.id, ...data });
+        case 'grid':
+            return React.createElement(Grid, { key: data.id, ...data });
         default:
             null;
     }
