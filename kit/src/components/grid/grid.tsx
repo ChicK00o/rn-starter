@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import { FlatGrid } from '../../utils/grid';
+import { FlatGrid } from 'react-native-super-grid';
 import { componentData } from '../componentSelector';
 
 const Grid: React.FunctionComponent<componentData> = () => {
