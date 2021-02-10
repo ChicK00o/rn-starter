@@ -5,7 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "react-scripts start",
+    "web": "cd web && webpack serve",
+    "web:build": "cd web && webpack",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
@@ -29,16 +30,24 @@
     "use-async-resource": "^2.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "@types/jest": "^25.2.3",
+    "@types/jest": "^26.0.20",
+    "@types/mocha": "^8.2.0",
     "@types/react-native": "^0.63.2",
     "@types/react-test-renderer": "^16.9.2",
+    "babel-loader": "^8.2.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-scripts": "^4.0.1",
     "react-test-renderer": "16.13.1",
-    "typescript": "^3.8.3"
+    "ts-loader": "^8.0.16",
+    "typescript": "^3.8.3",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "jest": {
     "preset": "react-native",
